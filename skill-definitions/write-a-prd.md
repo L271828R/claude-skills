@@ -35,12 +35,64 @@ You may skip steps if you don't consider them necessary.
 
 4. **Sketch out the major modules** you will need to build or modify to complete the implementation. Actively look for opportunities to extract deep modules that can be tested in isolation.
 
-5. **Write the PRD** covering:
-   - Problem statement (link to BRD if one exists)
-   - Goals and non-goals
-   - User stories / acceptance criteria
-   - Scope: what is in / out
-   - Module design and key decisions
-   - Open questions
+   A **deep module** (as opposed to a shallow module) is one which encapsulates a lot of functionality in a simple, testable interface which rarely changes.
+
+   Check with the user that these modules match their expectations. Check with the user which modules they want tests written for.
+
+5. **Write the PRD** using the template below. The PRD should be self-contained — a developer with no prior context should be able to read it and know exactly what to build.
 
 6. **Submit** as a GitHub issue or save to a `prd/` directory in the repo, as the user prefers.
+
+---
+
+## PRD Template
+
+```markdown
+# PRD: [Feature Name]
+
+**Status:** Draft | In Review | Approved  
+**Author:** [name]  
+**Date:** [date]  
+**BRD:** [link or "none"]
+
+---
+
+## Problem Statement
+[What problem does this solve? Who has the problem? What is the impact?]
+
+## Goals
+- [Measurable goal 1]
+- [Measurable goal 2]
+
+## Non-Goals
+- [Explicitly out of scope — prevents scope creep]
+
+## User Stories
+- As a [user], I want to [action] so that [outcome].
+
+## Acceptance Criteria
+- [ ] [Specific, testable condition]
+- [ ] [Specific, testable condition]
+
+## Module Design
+
+### Modules to build
+| Module | Responsibility | Interface | Tests needed |
+|--------|---------------|-----------|--------------|
+| [name] | [what it does] | [public API shape] | Yes / No |
+
+### Modules to modify
+| Module | Current behavior | Change required |
+|--------|-----------------|-----------------|
+| [name] | [what it does now] | [what changes] |
+
+## Key Decisions
+| Decision | Options considered | Choice | Reason |
+|----------|--------------------|--------|--------|
+
+## Open Questions
+- [ ] [Question that needs resolution before or during implementation]
+
+## Out of Scope
+- [Thing that came up but is explicitly excluded]
+```
