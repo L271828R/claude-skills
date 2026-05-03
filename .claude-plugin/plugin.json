@@ -1,0 +1,9 @@
+{
+  "name": "personal-skills",
+  "version": "1.0.0",
+  "description": "Personal skill library — custom skills for Claude Code",
+  "author": {
+    "name": "rueda",
+    "email": "luminai@gmail.com"
+  }
+}
